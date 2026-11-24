@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Syafiq Aminudin – Calon Web Developer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap">
+<style>
+:root{--bg1:#d9efff;--bg2:#e6dcff;--ink:#1c2140;--mute:#4f5578;--glass:rgba(255,255,255,.38);--gb:rgba(255,255,255,.7);--sh:rgba(88,92,200,.2);--b1:#8fd3ff;--b2:#b9a4ff;--b3:#a5b4ff;--chip:rgba(255,255,255,.5);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#10172e;--bg2:#1c1436;--ink:#eef0ff;--mute:#b7bcdf;--glass:rgba(40,44,90,.42);--gb:rgba(255,255,255,.18);--sh:rgba(0,0,0,.4);--b1:#2f7fc4;--b2:#7650c8;--b3:#4a58c8;--chip:rgba(255,255,255,.1)}}
+:root[data-theme="dark"]{--bg1:#10172e;--bg2:#1c1436;--ink:#eef0ff;--mute:#b7bcdf;--glass:rgba(40,44,90,.42);--gb:rgba(255,255,255,.18);--sh:rgba(0,0,0,.4);--b1:#2f7fc4;--b2:#7650c8;--b3:#4a58c8;--chip:rgba(255,255,255,.1)}
+*,*::before,*::after{box-sizing:inherit}
+html{color-scheme:light dark;scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,var(--bg1),var(--bg2)) fixed;color:var(--ink);font:400 17px/1.65 "Plus Jakarta Sans",system-ui,sans-serif;overflow-x:hidden}
+.blob{position:fixed;border-radius:50%;filter:blur(70px);opacity:.75;z-index:0;pointer-events:none;animation:drift 26s ease-in-out infinite alternate}
+.b1{width:46vmax;height:46vmax;background:var(--b1);top:-14vmax;left:-12vmax}
+.b2{width:42vmax;height:42vmax;background:var(--b2);bottom:-14vmax;right:-10vmax;animation-delay:-9s}
+.b3{width:28vmax;height:28vmax;background:var(--b3);top:38%;left:46%;animation-delay:-17s;opacity:.5}
+@keyframes drift{to{transform:translate(6vmax,4vmax) scale(1.12)}}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);border:1px solid var(--gb);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.55),inset 0 -1px 0 rgba(255,255,255,.1),0 14px 44px var(--sh)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:5;margin-top:14px;display:flex;justify-content:space-between;align-items:center;padding:10px 12px 10px 22px;border-radius:999px;font-size:15px}
+nav b{font-weight:800}
+nav div{display:flex;gap:4px}
+nav a{text-decoration:none;padding:7px 14px;border-radius:999px}
+nav a:hover{background:var(--chip)}
+.hero{margin-top:clamp(28px,8vh,72px);padding:clamp(26px,6vw,52px);border-radius:36px}
+.hero small{display:inline-block;padding:4px 14px;border-radius:999px;background:var(--chip);font-size:14px;font-weight:500}
+h1{font-size:clamp(38px,9vw,70px);line-height:1.04;font-weight:800;letter-spacing:-.03em;margin:18px 0 14px}
+h1 span{background:linear-gradient(100deg,#2b8fe0,#8a5cf0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:48ch;color:var(--mute);font-size:19px;margin:0 0 26px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:700;font-size:15px;border:1px solid var(--gb);background:var(--chip)}
+.btn.p{background:linear-gradient(135deg,#7cc6ff,#b49bff);color:#14183a;border-color:rgba(255,255,255,.6);box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6),0 8px 24px rgba(120,110,240,.35)}
+.btn:hover{filter:brightness(1.06)}
+section{padding-top:64px}
+h2{font-size:clamp(26px,5vw,36px);font-weight:800;letter-spacing:-.02em;margin:0 0 20px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{padding:24px;border-radius:26px}
+.card h3{margin:0 0 6px;font-size:19px}
+.card p{margin:0 0 14px;color:var(--mute);font-size:15.5px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tags span,.sk span{background:var(--chip);border:1px solid var(--gb);padding:2px 12px;border-radius:999px;font-size:14px}
+.about{padding:clamp(22px,5vw,36px);border-radius:30px;display:grid;gap:14px}
+.about p{margin:0;max-width:58ch}
+.sk{display:flex;gap:8px;flex-wrap:wrap}
+.sk span{padding:5px 16px}
+.contact{padding:clamp(26px,6vw,44px);border-radius:34px;text-align:left}
+.contact p{font-size:clamp(22px,4.6vw,32px);line-height:1.25;font-weight:700;margin:0 0 20px;letter-spacing:-.01em}
+footer{padding:44px 0 36px;color:var(--mute);font-size:14px}
+.hero,.card,.about,.contact{position:relative}
+.glass{--mx:50%;--my:0%}
+.glass::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;opacity:0;transition:opacity .35s;background:radial-gradient(240px circle at var(--mx) var(--my),rgba(255,255,255,.6),rgba(255,255,255,0) 65%)}
+.glass.on::before{opacity:1}
+.glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.26) 48%,transparent 66%);background-size:300% 100%;background-position:var(--sp,0%) 0}
+.card{transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.card:hover{transform:translateY(-5px) scale(1.015)}
+.card:active{transform:scale(.97)}
+.btn{transition:transform .45s cubic-bezier(.34,1.56,.64,1),filter .2s}
+.btn:active{transform:scale(.93)}
+nav{transition:box-shadow .3s}
+nav.s{box-shadow:inset 0 1.5px 0 rgba(255,255,255,.6),0 18px 50px var(--sh);-webkit-backdrop-filter:blur(36px) saturate(190%);backdrop-filter:blur(36px) saturate(190%)}
+nav div{position:relative}
+nav a{position:relative;z-index:1;transition:transform .4s cubic-bezier(.34,1.56,.64,1)}
+nav a:hover{background:transparent}
+nav a:active{transform:scale(.9)}
+.pill{position:absolute;left:0;top:0;height:100%;width:0;border-radius:999px;opacity:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(255,255,255,.35));box-shadow:inset 0 1.5px 0 #fff,inset 0 -2px 6px rgba(120,110,240,.25),0 6px 18px var(--sh);transition:transform .6s cubic-bezier(.34,1.45,.5,1),width .6s cubic-bezier(.34,1.45,.5,1),opacity .3s}
+.pill.show{opacity:1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pill{background:linear-gradient(135deg,rgba(255,255,255,.26),rgba(255,255,255,.1))}}
+:root[data-theme="dark"] .pill{background:linear-gradient(135deg,rgba(255,255,255,.26),rgba(255,255,255,.1))}
+@media (prefers-reduced-motion:reduce){.card,.btn,.pill,nav a{transition:none}.glass::after{display:none}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.glass{background:rgba(240,240,255,.92)}}
+@media (prefers-reduced-motion:reduce){.blob{animation:none}html{scroll-behavior:auto}}
+@media (max-width:520px){nav{padding-left:16px}nav a{padding:7px 9px}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="wrap">
+<nav class="glass"><b>Syafiq</b><div><i class="pill"></i><a href="#proyek">Proyek</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></div></nav>
+
+<header class="hero glass">
+<small>Garut, Jawa Barat</small>
+<h1>Syafiq Aminudin, <span>calon web developer.</span></h1>
+<p class="lead">Saya sedang belajar membangun situs yang rapi, cepat, dan nyaman dipakai, mulai dari HTML, CSS, sampai JavaScript. Di sini saya mengumpulkan proyek dan perkembangan belajar saya.</p>
+<div class="cta"><a class="btn p" href="#proyek">Lihat proyek</a><a class="btn" href="#kontak">Hubungi saya</a></div>
+</header>
+
+<section id="proyek">
+<h2>Proyek</h2>
+<div class="grid">
+<article class="card glass"><h3>Landing page usaha lokal</h3><p>Contoh: ganti dengan proyek Anda. Halaman satu layar untuk usaha di Garut, responsif di ponsel.</p><div class="tags"><span>HTML</span><span>CSS</span></div></article>
+<article class="card glass"><h3>Aplikasi daftar tugas</h3><p>Contoh: ganti dengan proyek Anda. Menambah, mencentang, dan menghapus tugas dengan JavaScript.</p><div class="tags"><span>JavaScript</span><span>DOM</span></div></article>
+<article class="card glass"><h3>Situs portofolio ini</h3><p>Contoh: ganti dengan proyek Anda. Tampilan kaca cair dengan mode terang dan gelap.</p><div class="tags"><span>CSS</span><span>Desain responsif</span></div></article>
+</div>
+</section>
+
+<section id="tentang">
+<h2>Tentang</h2>
+<div class="about glass">
+<p>Saya mulai belajar coding dari dasar dengan target menjadi web developer. Saya belajar lewat proyek kecil yang selesai dan dipublikasikan, bukan hanya mengikuti tutorial.</p>
+<p>Saya terbuka untuk kesempatan magang, proyek kecil, atau kolaborasi.</p>
+<div class="sk"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span><span>Desain responsif</span></div>
+</div>
+</section>
+
+<section id="kontak">
+<h2>Kontak</h2>
+<div class="contact glass">
+<p>Ada ide atau peluang untuk dibicarakan? Kirim surel ke syafiqaminudin74@gmail.com.</p>
+<a class="btn p" href="mailto:syafiqaminudin74@gmail.com">Kirim surel</a>
+</div>
+</section>
+
+<footer>© 2026 Syafiq Aminudin. Dibuat dengan HTML dan CSS.</footer>
+<script>
+(function(){
+var nav=document.querySelector("nav div"),pill=nav.querySelector(".pill"),links=[].slice.call(nav.querySelectorAll("a")),
+secs=links.map(function(a){return document.querySelector(a.getAttribute("href"))}),cur=null;
+function to(a){if(!a){pill.classList.remove("show");return}pill.style.width=a.offsetWidth+"px";pill.style.transform="translateX("+a.offsetLeft+"px)";pill.classList.add("show")}
+function spy(){var y=window.scrollY+innerHeight*.35,best=null;secs.forEach(function(s,i){if(s.offsetTop<=y)best=links[i]});if(best!==cur){cur=best;to(cur)}}
+addEventListener("scroll",spy,{passive:true});addEventListener("resize",function(){to(cur)});
+links.forEach(function(a){a.addEventListener("click",function(){cur=a;to(a)})});spy();
+document.querySelectorAll(".glass").forEach(function(el){
+function mv(e){var r=el.getBoundingClientRect();el.style.setProperty("--mx",(e.clientX-r.left)+"px");el.style.setProperty("--my",(e.clientY-r.top)+"px");el.classList.add("on")}
+el.addEventListener("pointermove",mv);el.addEventListener("pointerdown",mv);
+el.addEventListener("pointerleave",function(){el.classList.remove("on")});
+el.addEventListener("pointerup",function(e){if(e.pointerType==="touch")setTimeout(function(){el.classList.remove("on")},450)});
+});
+var calm=matchMedia("(prefers-reduced-motion:reduce)").matches,bl=document.querySelectorAll(".blob"),nv=document.querySelector("nav"),tk=false,root=document.documentElement;
+function sc(){tk=false;var y=scrollY;nv.classList.toggle("s",y>20);if(calm)return;bl.forEach(function(el,i){el.style.translate="0 "+(-y*(.05+i*.04))+"px"});root.style.setProperty("--sp",(50+50*Math.sin(y/260))+"%")}
+addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(sc)}},{passive:true});sc();
+})();
+</script>
+</div>
+</body>
+</html>
